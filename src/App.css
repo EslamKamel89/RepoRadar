@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+@theme {
+  /* ────────────────────────────── */
+  /* Neutrals — UI foundation       */
+  /* ────────────────────────────── */
+
+  --color-background: oklch(0.98 0.01 250); /* #f9fafb */
+  --color-surface: oklch(1 0 0); /* #ffffff */
+  --color-border: oklch(0.9 0.01 250); /* #e5e7eb */
+
+  --color-foreground: oklch(0.2 0.02 250); /* #111827 */
+  --color-muted: oklch(0.55 0.02 250); /* #6b7280 */
+
+  /* ────────────────────────────── */
+  /* Brand / Primary                */
+  /* ────────────────────────────── */
+
+  --color-primary: oklch(0.55 0.18 255); /* #2563eb */
+  --color-primary-hover: oklch(0.48 0.2 255); /* #1d4ed8 */
+  --color-primary-soft: oklch(0.92 0.05 255); /* #dbeafe */
+
+  /* ────────────────────────────── */
+  /* Accent / Focus                 */
+  /* ────────────────────────────── */
+
+  --color-accent: oklch(0.55 0.14 200); /* #0891b2 */
+  --color-accent-soft: oklch(0.92 0.06 200); /* #cffafe */
+
+  /* ────────────────────────────── */
+  /* Status colors                  */
+  /* ────────────────────────────── */
+
+  --color-success: oklch(0.6 0.15 145); /* #16a34a */
+  --color-error: oklch(0.55 0.22 25); /* #dc2626 */
+  --color-warning: oklch(0.65 0.17 80); /* #d97706 */
+}
