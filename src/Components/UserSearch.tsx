@@ -2,9 +2,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState, type FormEvent } from "react";
 import { FaGithub } from "react-icons/fa";
+import { fetchGithubUser } from "../api/github";
 import type { GithubUser } from "../types/GithubUser";
-
-const baseUrl = import.meta.env.VITE_GITHUB_API_URL;
 
 const UserSearch: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -17,11 +16,7 @@ const UserSearch: React.FC = () => {
     isLoading,
   } = useQuery<GithubUser>({
     queryKey: ["users", submittedUsername],
-    queryFn: async () => {
-      const res = await fetch(`${baseUrl}/users/${submittedUsername}`);
-      if (!res.ok) throw new Error("User not found");
-      return (await res.json()) as GithubUser;
-    },
+    queryFn: fetchGithubUser(submittedUsername),
     enabled: !!submittedUsername,
     staleTime: 1000 * 60 * 5,
   });
