@@ -25,19 +25,19 @@ const UserCard: React.FC<{ user: GithubUser }> = ({ user }) => {
             <div>
               <span className="font-semibold text-foreground">
                 {user.public_repos}
-              </span>
+              </span>{" "}
               <span className="text-muted">Repos</span>
             </div>
             <div>
               <span className="font-semibold text-foreground">
                 {user.followers}
-              </span>
+              </span>{" "}
               <span className="text-muted">Followers</span>
             </div>
             <div>
               <span className="font-semibold text-foreground">
                 {user.following}
-              </span>
+              </span>{" "}
               <span className="text-muted">Following</span>
             </div>
           </div>
